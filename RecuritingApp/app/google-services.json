@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "26829601721",
+    "firebase_url": "https://recruiting-6a253-default-rtdb.firebaseio.com",
+    "project_id": "recruiting-6a253",
+    "storage_bucket": "recruiting-6a253.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26829601721:android:56dcf324ee42dd21a45468",
+        "android_client_info": {
+          "package_name": "com.afee.recuritingapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVp5mwHwmN6ft2Q9WrcmPV47TU2KGg90o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
