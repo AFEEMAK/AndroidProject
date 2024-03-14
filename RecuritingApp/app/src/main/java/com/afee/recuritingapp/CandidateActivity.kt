@@ -1,6 +1,8 @@
 package com.afee.recuritingapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,13 +16,24 @@ class CandidateActivity : AppCompatActivity() {
         setContentView(R.layout.activity_candidate)
 
         val query = FirebaseDatabase.getInstance().reference.child("Candidates")
-        val options = FirebaseRecyclerOptions.Builder<Candidates>().setQuery(query, Candidates::class.java).build()
+        val options =
+            FirebaseRecyclerOptions.Builder<Candidates>().setQuery(query, Candidates::class.java)
+                .build()
         adapter = CandidateAdapter(options)
 
 
-        val rView : RecyclerView = findViewById(R.id.candidatesRView)
+        val rView: RecyclerView = findViewById(R.id.candidatesRView)
         rView.layoutManager = LinearLayoutManager(this)
         rView.adapter = adapter
+
+
+        val viewPostsButton: Button = findViewById(R.id.viewPostsButton)
+        viewPostsButton.setOnClickListener {
+
+            startActivity(Intent(this@CandidateActivity, MainActivity::class.java))
+
+            finish()
+        }
     }
 
     override fun onStart() {
