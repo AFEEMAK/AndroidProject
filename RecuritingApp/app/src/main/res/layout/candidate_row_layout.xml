@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_marginHorizontal="10dp"
+    android:background="#8A85BF"
+    android:elevation="3dp"
+    android:padding="10dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -11,26 +14,66 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:background="#8A85BF"
+            android:orientation="horizontal"
+            android:outlineAmbientShadowColor="#FFFFFF"
+            android:outlineSpotShadowColor="#FFFFFF"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="33dp">
 
             <ImageView
                 android:id="@+id/candidateImageView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="135dp"
+                android:layout_height="104dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="Product Image"
                 tools:srcCompat="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/nameTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Name" />
+                android:background="#8A85BF"
+                android:text="Donald "
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/titleTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="title" />
+                android:background="#8A85BF"
+                android:text="Director"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/candidateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="0dp"
+                android:text="View User"
+                android:textColor="#8A85BF"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
