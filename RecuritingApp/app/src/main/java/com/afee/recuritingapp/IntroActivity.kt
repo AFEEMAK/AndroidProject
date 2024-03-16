@@ -15,7 +15,7 @@ class IntroActivity : AppCompatActivity() {
         val introButton: Button = findViewById(R.id.intro_button)
         introButton.setOnClickListener {
 
-            startActivity(Intent(this@IntroActivity, MainActivity::class.java))
+            startActivity(Intent(this@IntroActivity, SignInActivity::class.java))
 
             finish()
         }
