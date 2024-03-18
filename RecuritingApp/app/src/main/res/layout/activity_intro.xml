@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FEFEFE">
+    android:background="#232946">
 
 
     <ImageView
@@ -33,7 +33,7 @@
         android:text="Recruiting App"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="#8A85BF"
+        android:textColor="#fffffe"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -47,11 +47,11 @@
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="500dp"
-        android:background="#2D99E3"
+        android:background="#eebbc3"
         android:padding="12dp"
         android:text="Go"
         android:textAllCaps="true"
-        android:textColor="#FEFEFE"
+        android:textColor="#232946"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.443"

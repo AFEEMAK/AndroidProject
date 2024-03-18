@@ -1,84 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="10dp"
-    android:background="#FFFFFF"
-    android:outlineAmbientShadowColor="#FFFFFF"
-    android:outlineSpotShadowColor="#FFFFFF"
+    android:background="#fffffe"
     android:elevation="3dp"
     android:padding="10dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:background="#232946"
+        app:cardBackgroundColor="#232946">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#8A85BF"
-            android:orientation="horizontal"
-            android:outlineAmbientShadowColor="#FFFFFF"
-            android:outlineSpotShadowColor="#FFFFFF"
+            android:background="#232946"
+            android:orientation="vertical"
+
             tools:layout_editor_absoluteX="5dp"
             tools:layout_editor_absoluteY="33dp">
 
-            <ImageView
-                android:id="@+id/candidateImageView"
-                android:layout_width="135dp"
-                android:layout_height="104dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:contentDescription="Product Image"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/nameTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#8A85BF"
-                android:text="Donald "
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/titleTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#8A85BF"
-                android:text="Director"
-                android:textColor="#FFFFFF" />
+                <ImageView
+                    android:id="@+id/candidateImageView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="User Image"
+                    tools:srcCompat="@tools:sample/avatars" />
 
-            <Button
-                android:id="@+id/candidateButton"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                <LinearLayout
 
-                android:layout_marginTop="10dp"
-                android:background="#2D99E3"
-                android:padding="10dp"
-                android:text="View User"
-                android:textAllCaps="true"
-                android:textColor="#FEFEFE"
-                android:textSize="16sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                tools:ignore="HardcodedText" />
+                    <TextView
+                        android:id="@+id/nameTextView"
 
-        </LinearLayout>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
 
+                        android:text="Donald "
+                        android:textColor="#eebbc3"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,NestedWeights" />
+
+
+
+                    <TextView
+                        android:id="@+id/titleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:text="postsDescription"
+                        android:textColor="#fffffe"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/candidateButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:background="#b8c1ec"
+                        android:padding="4dp"
+                        android:text="View"
+                        android:textColor="#232946"
+                        android:textSize="16sp"
+                        android:layout_marginTop="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText,TextSizeCheck" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
