@@ -17,6 +17,8 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
+
+
         candidateId = intent.getStringExtra("candidateId") ?: ""
         connectButton = findViewById(R.id.connect_button)
 
