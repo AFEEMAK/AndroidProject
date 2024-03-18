@@ -10,7 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
-
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 
 
 class CandidateAdapter(options: FirebaseRecyclerOptions<Candidates>) : FirebaseRecyclerAdapter<Candidates, CandidateAdapter.MyViewHolder>(options){
@@ -23,9 +24,8 @@ class CandidateAdapter(options: FirebaseRecyclerOptions<Candidates>) : FirebaseR
     override fun onBindViewHolder(holder: MyViewHolder, position: Int, model: Candidates){
         holder.nameTextView.text = model.name
         holder.titleTextView.text = model.position
-        Glide.with(holder.candidateImg.context)
-            .load(model.photo)
-            .into(holder.candidateImg)
+        val storRef: StorageReference = FirebaseStorage.getInstance().getReferenceFromUrl(model.photo)
+        Glide.with(holder.candidateImg.context).load(storRef).into(holder.candidateImg)
 
         holder.detailButton.setOnClickListener {
             val context = holder.itemView.context
