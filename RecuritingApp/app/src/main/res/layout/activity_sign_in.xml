@@ -4,77 +4,142 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#232946"
     tools:context=".SignInActivity">
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailLayout"
+    <ImageView
+        android:id="@+id/introImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="Logo of Recruiting App"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ralogo"
+        tools:ignore="HardcodedText" />
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="350dp"
-        app:boxStrokeColor="@color/blue"
-        app:hintTextColor="@color/blue"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailEt"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Type your Email"
-            android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#b8c1ec"
+            android:textSize="32sp"
+            app:boxStrokeColor="#b8c1ec"
+            app:hintTextColor="#b8c1ec"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            >
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="24dp"
-        app:boxStrokeColor="@color/blue"
-        app:hintTextColor="@color/blue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/emailLayout"
-        app:passwordToggleEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fffffe"
+                android:hint="Enter Email"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="40dp"
+                android:padding="8dp"
+                tools:ignore="HardcodedText" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passET"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordLayout"
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
-            android:hint="Type Your Password"
-            android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:background="@color/blue"
-        android:text="Sign In"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordLayout" />
+            android:layout_marginHorizontal="16dp"
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:text="Not Registered Yet, Sign Up !"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#b8c1ec"
+            android:textSize="32sp"
+            app:boxStrokeColor="#b8c1ec"
+
+
+            app:hintTextColor="#b8c1ec"
+            app:passwordToggleEnabled="true"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fffffe"
+                android:hint="Type Your Password"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                tools:ignore="HardcodedText"
+                android:layout_marginTop="40dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="50dp"
+
+            android:layout_marginHorizontal="16dp"
+
+            android:background="#eebbc3"
+
+            android:padding="8dp"
+            android:text="Sign In"
+
+            android:textAllCaps="true"
+            android:textColor="#232946"
+            android:textSize="20sp"
+            android:layout_marginTop="40dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not Registered Yet, Sign Up !"
+            android:textColor="#b8c1ec"
+            tools:ignore="HardcodedText"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
