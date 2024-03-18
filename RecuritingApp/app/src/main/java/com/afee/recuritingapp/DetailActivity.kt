@@ -12,12 +12,28 @@ import com.google.firebase.database.*
 class DetailActivity : AppCompatActivity() {
     private lateinit var candidateId: String
     private lateinit var connectButton: Button
+    private lateinit var btnlogout: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
+        val viewCandidatesButton: Button = findViewById(R.id.viewCandidatesButton)
+        viewCandidatesButton.setOnClickListener {
+            startActivity(Intent(this@DetailActivity, CandidateActivity::class.java))
+            finish()
+        }
 
+        btnlogout = findViewById(R.id.btnlogout)
+        btnlogout.setOnClickListener{
+            FirebaseAuth.getInstance().signOut()
+
+            val intent = Intent(this, SignInActivity::class.java)
+            startActivity(intent)
+
+            Toast.makeText(this, "Logout Successful", Toast.LENGTH_SHORT).show()
+            finish()
+        }
 
         candidateId = intent.getStringExtra("candidateId") ?: ""
         connectButton = findViewById(R.id.connect_button)
